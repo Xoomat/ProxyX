@@ -13,10 +13,10 @@ data class ProxySettings(
         const val DEFAULT_PORT = 1080
         const val DEFAULT_DC_MAPPINGS = "2:149.154.167.220\n4:149.154.167.220"
         const val PREFS_NAME = "proxy_settings"
-        private const val KEY_HOST = "host"
-        private const val KEY_PORT = "port"
-        private const val KEY_DC_MAPPINGS = "dc_mappings"
-        private const val KEY_VERBOSE = "verbose"
+        const val KEY_HOST = "host"
+        const val KEY_PORT = "port"
+        const val KEY_DC_MAPPINGS = "dc_mappings"
+        const val KEY_VERBOSE = "verbose"
 
         fun load(context: Context): ProxySettings {
             val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -42,7 +42,12 @@ data class ProxySettings(
         fun reset(context: Context) {
             save(
                 context,
-                ProxySettings(DEFAULT_HOST, DEFAULT_PORT, DEFAULT_DC_MAPPINGS, false)
+                ProxySettings(
+                    host = DEFAULT_HOST,
+                    port = DEFAULT_PORT,
+                    dcMappings = DEFAULT_DC_MAPPINGS,
+                    verbose = false
+                )
             )
         }
     }
