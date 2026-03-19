@@ -1,66 +1,101 @@
 # ProxyX
 
-Android-приложение для запуска локального Telegram proxy на телефоне.
+Лёгкое Android-приложение для запуска локального Telegram proxy прямо на телефоне.
 
-[![Скачать Latest APK](https://img.shields.io/badge/Download-Latest%20APK-2ea44f?style=for-the-badge&logo=android)](https://github.com/Xoomat/ProxyX/releases/latest)
-[![Latest Release](https://img.shields.io/github/v/release/Xoomat/ProxyX?style=for-the-badge)](https://github.com/Xoomat/ProxyX/releases/latest)
+<p align="center">
+  <a href="https://github.com/Xoomat/ProxyX/releases/latest">
+    <img src="https://img.shields.io/badge/ProxyX-Download%20APK-111111?style=for-the-badge&logo=android&logoColor=white&labelColor=000000" />
+  </a>
+  <a href="https://github.com/Xoomat/ProxyX/releases/latest">
+    <img src="https://img.shields.io/badge/View-Releases-222222?style=for-the-badge" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/downloads/Xoomat/ProxyX/total?style=for-the-badge" />
+</p>
+
+---
+
+## Что это вообще
+
+ProxyX поднимает локальный proxy прямо на устройстве и даёт быстрый способ подключить его к Telegram без лишних телодвижений.
+
+Без серверов, без лишней настройки — всё запускается на телефоне.
+
+---
 
 ## Установка
 
-1. Откройте страницу `Latest APK` (кнопка выше).
-2. Скачайте файл `.apk` из последнего релиза.
-3. Установите APK на ваш телефон.
-4. Если телефон попросит разрешение: включите установку из браузера/файлового менеджера.
+1. Открой страницу релизов (кнопка выше)
+2. Скачай последний `.apk`
+3. Установи его на устройство
+4. Если нужно — разреши установку из неизвестных источников
 
-## Как пользоваться
+---
 
-1. Запустите `proxyX`.
-2. На вкладке `Главная` нажмите кнопку запуска прокси.
-3. Нажмите `Добавить proxy в телеграм`.
-4. В Telegram проверьте, что прокси включен.
+## Использование
 
-## Настройки (Для знающих)
+1. Запусти `ProxyX`
+2. На вкладке `Главная` нажми запуск прокси
+3. Нажми `Добавить proxy в Telegram`
+4. Проверь в Telegram, что он включился
 
-Во вкладке `Настройки` можно изменить:
-- IP-адрес прокси
-- Порт
-- DC → IP маппинги (по одному на строку, формат `DC:IP`)
-- Подробное логирование
+---
 
-Кнопки:
-- `Сохранить`
-- `Сбросить настройки`
+## Настройки (только если понимаешь, что делаешь)
 
-Важно: изменения применяются после перезапуска прокси.
+* IP-адрес
+* Порт
+* DC → IP (формат `DC:IP`, по одному на строку)
+* Подробное логирование
+
+Изменения применяются после перезапуска прокси.
+
+---
 
 ## Обновления
 
-- Кнопка `Проверить обновления` находится во вкладке `Настройки`.
+Проверка обновлений находится во вкладке `Настройки`.
 
-
+---
 
 # Для разработчиков
 
-Исходный код Android находится в папке `android/`.
+Исходный код приложения находится в ветке main
 
-Быстрый старт:
+---
+
+### Debug сборка
 
 ```powershell
-cd android
 .\gradlew.bat :app:assembleDebug
 ```
 
-Debug APK:
+Результат:
 
-`android/app/build/outputs/apk/debug/app-debug.apk`
+```
+app/build/outputs/apk/debug/app-debug.apk
+```
 
-Release-сборка:
+---
+
+### Release сборка
 
 ```powershell
-cd android
 .\gradlew.bat :app:assembleRelease
 ```
 
-Подпись релиза:
-- Скопируйте `android/keystore.properties.example` в `android/keystore.properties`
-- Укажите параметры keystore
+---
+
+### Подпись релиза
+
+* Скопируй `keystore.properties.example` → `android/keystore.properties`
+* Заполни параметры keystore
+
+---
+
+## Примечание
+
+Если что-то не работает — сначала попробуй перезапустить прокси.
+Большинство изменений применяется только после рестарта.
