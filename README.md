@@ -3,12 +3,7 @@
 Лёгкое Android-приложение для запуска локального Telegram proxy прямо на телефоне.
 
 <p align="center">
-  <a href="https://github.com/Xoomat/ProxyX/releases/latest">
-    <img src="https://img.shields.io/badge/ProxyX-Download%20APK-111111?style=for-the-badge&logo=android&logoColor=white&labelColor=000000" />
-  </a>
-  <a href="https://github.com/Xoomat/ProxyX/releases/latest">
-    <img src="https://img.shields.io/badge/View-Releases-222222?style=for-the-badge" />
-  </a>
+  <a href="https://github.com/Xoomat/ProxyX/releases/latest"><img src="https://img.shields.io/badge/ProxyX-Download%20APK-111111?style=for-the-badge&logo=android&logoColor=white&labelColor=000000" /></a>&nbsp;&nbsp;<a href="https://github.com/Xoomat/ProxyX/releases/latest"><img src="https://img.shields.io/badge/View-Releases-222222?style=for-the-badge" /></a>
 </p>
 
 <p align="center">
