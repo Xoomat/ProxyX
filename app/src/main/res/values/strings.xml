@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">proxyX</string>
+    <string name="status_running">Подключено</string>
+    <string name="status_stopped">Отключено</string>
+    <string name="action_start_proxy">Запустить proxy</string>
+    <string name="action_stop_proxy">Остановить proxy</string>
+    <string name="action_open_telegram">Добавить в Telegram</string>
+    <string name="channel_name">proxyX service</string>
+    <string name="stop_button">Остановить</string>
+    <string name="telegram_not_found">Telegram не найден на устройстве</string>
+</resources>

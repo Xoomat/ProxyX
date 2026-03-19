@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.TgWsProxyAndroid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#1A2F49</item>
+        <item name="colorPrimaryVariant">#13263B</item>
+        <item name="colorOnPrimary">#EAF0FA</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#020F24</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">#13263B</item>
+    </style>
+</resources>
