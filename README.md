@@ -1,38 +1,66 @@
-# ProxyX (Clean Source Export)
+# ProxyX
 
-Это очищенная версия Android-исходников без кастомного интерфейса (минимальный UI только для запуска/остановки сервиса), чтобы разработчики могли собрать и доработать приложение под себя.
+Android-приложение для запуска локального Telegram proxy на телефоне.
 
-## Что внутри
+[![Скачать Latest APK](https://img.shields.io/badge/Download-Latest%20APK-2ea44f?style=for-the-badge&logo=android)](https://github.com/Xoomat/ProxyX/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/Xoomat/ProxyX?style=for-the-badge)](https://github.com/Xoomat/ProxyX/releases/latest)
 
-- Android-проект с Chaquopy
-- Kotlin-сервис `ProxyService` для запуска Python proxy
-- Python-ядро в `app/src/main/python`
-- Минимальный `MainActivity` без дизайнерских экранов
+## Установка
 
-## Что убрано
+1. Откройте страницу `Latest APK` (кнопка выше).
+2. Скачайте файл `.apk` из последнего релиза.
+3. Установите APK на ваш телефон.
+4. Если телефон попросит разрешение: включите установку из браузера/файлового менеджера.
 
-- build-кэш, `.gradle`, `app/build`, IDE-файлы
-- лишние ресурсы и дизайн-ассеты UI
-- локальные секреты (`local.properties`, `keystore.properties`, keystore-файлы)
+## Как пользоваться
 
-## Сборка
+1. Запустите `proxyX`.
+2. На вкладке `Главная` нажмите кнопку запуска прокси.
+3. Нажмите `Добавить proxy в телеграм`.
+4. В Telegram проверьте, что прокси включен.
+
+## Настройки (Для знающих)
+
+Во вкладке `Настройки` можно изменить:
+- IP-адрес прокси
+- Порт
+- DC → IP маппинги (по одному на строку, формат `DC:IP`)
+- Подробное логирование
+
+Кнопки:
+- `Сохранить`
+- `Сбросить настройки`
+
+Важно: изменения применяются после перезапуска прокси.
+
+## Обновления
+
+- Кнопка `Проверить обновления` находится во вкладке `Настройки`.
+
+
+
+# Для разработчиков
+
+Исходный код Android находится в папке `android/`.
+
+Быстрый старт:
 
 ```powershell
 cd android
 .\gradlew.bat :app:assembleDebug
 ```
 
-APK:
+Debug APK:
 
 `android/app/build/outputs/apk/debug/app-debug.apk`
 
-## Release-подпись
-
-1. Скопировать `keystore.properties.example` в `keystore.properties`
-2. Заполнить параметры keystore
-3. Запустить:
+Release-сборка:
 
 ```powershell
 cd android
 .\gradlew.bat :app:assembleRelease
 ```
+
+Подпись релиза:
+- Скопируйте `android/keystore.properties.example` в `android/keystore.properties`
+- Укажите параметры keystore
