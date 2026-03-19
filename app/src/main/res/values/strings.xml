@@ -6,7 +6,22 @@
     <string name="action_start_proxy">Запустить proxy</string>
     <string name="action_stop_proxy">Остановить proxy</string>
     <string name="action_open_telegram">Добавить в Telegram</string>
+    <string name="action_open_settings">Открыть настройки</string>
     <string name="channel_name">proxyX service</string>
     <string name="stop_button">Остановить</string>
     <string name="telegram_not_found">Telegram не найден на устройстве</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_proxy_ip">IP-адрес прокси</string>
+    <string name="settings_proxy_port">Порт прокси</string>
+    <string name="settings_dc_mappings">DC → IP маппинги (по одному на строку, формат DC:IP)</string>
+    <string name="settings_verbose">Подробное логирование (verbose)</string>
+    <string name="settings_hint_restart">Изменения вступят в силу после перезапуска прокси.</string>
+    <string name="settings_save">Сохранить</string>
+    <string name="settings_reset">Сбросить настройки</string>
+    <string name="settings_saved">Настройки сохранены</string>
+    <string name="settings_reset_done">Настройки сброшены</string>
+    <string name="settings_host_required">Введите IP-адрес прокси</string>
+    <string name="settings_port_invalid">Введите корректный порт (1-65535)</string>
+    <string name="settings_dc_required">Введите хотя бы один DC:IP маппинг</string>
 </resources>

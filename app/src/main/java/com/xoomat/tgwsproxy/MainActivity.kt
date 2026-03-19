@@ -86,6 +86,11 @@ class MainActivity : AppCompatActivity() {
             setOnClickListener { openTelegramProxyLink() }
         }
 
+        val openSettingsButton = Button(this).apply {
+            text = getString(R.string.action_open_settings)
+            setOnClickListener { startActivity(Intent(this@MainActivity, SettingsActivity::class.java)) }
+        }
+
         root.addView(title)
         root.addView(space(this, spacing))
         root.addView(statusView)
@@ -93,6 +98,8 @@ class MainActivity : AppCompatActivity() {
         root.addView(toggleButton)
         root.addView(space(this, spacing))
         root.addView(openTelegramButton)
+        root.addView(space(this, spacing))
+        root.addView(openSettingsButton)
 
         setContentView(root)
     }
@@ -124,7 +131,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openTelegramProxyLink() {
-        val uri = Uri.parse("tg://socks?server=127.0.0.1&port=1080")
+        val settings = ProxySettings.load(this)
+        val uri = Uri.parse("tg://socks?server=${settings.host}&port=${settings.port}")
         try {
             startActivity(Intent(Intent.ACTION_VIEW, uri))
         } catch (_: ActivityNotFoundException) {

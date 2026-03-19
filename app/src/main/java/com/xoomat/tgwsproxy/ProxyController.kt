@@ -22,12 +22,19 @@ object ProxyController {
     fun start(context: Context): Result<Unit> {
         return try {
             ensurePython(context)
+            val settings = ProxySettings.load(context)
+            val dcList = settings.dcMappings
+                .replace("\r", "")
+                .lines()
+                .map { it.trim() }
+                .filter { it.isNotEmpty() }
+                .joinToString(",")
             val started = module?.callAttr(
                 "start",
-                1080,
-                "127.0.0.1",
-                "2:149.154.167.220,4:149.154.167.220",
-                false
+                settings.port,
+                settings.host,
+                dcList,
+                settings.verbose
             )?.toBoolean() ?: false
             if (!started) {
                 val err = module?.callAttr("last_error")?.toString().orEmpty()
