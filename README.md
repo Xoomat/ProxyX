@@ -85,7 +85,7 @@ app/build/outputs/apk/debug/app-debug.apk
 
 ### Подпись релиза
 
-* Скопируй `keystore.properties.example` → `android/keystore.properties`
+* Скопируй `keystore.properties.example` → `keystore.properties`
 * Заполни параметры keystore
 
 ---
